@@ -1,0 +1,17 @@
+source venv/bin/activate
+
+migrations:
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py runserver
+
+front
+
+
+# Удалите старые миграции (если есть)
+rm -f backend/core/migrations/*.py
+
+# Создайте новые миграции
+python manage.py makemigrations
+python manage.py migrate
